@@ -1,0 +1,18 @@
+.icon-add {
+	background: url('../images/icon_plus.gif') 4px 4px transparent no-repeat;
+}
+.iconMoveDown {
+	background: url('../images/icon_move_down.gif') 4px 4px transparent no-repeat;
+}
+.iconMoveDownDisabled {
+    background: url('../images/icon_move_down-disabled.gif') 4px 4px transparent no-repeat;
+}
+.iconMoveUp {
+	background: url('../images/icon_move_up.gif') 4px 4px transparent no-repeat;
+}
+.iconMoveUpDisabled {
+    background: url('../images/icon_move_up-disabled.gif') 4px 4px transparent no-repeat;
+}
+.iconRemove {
+	background: url('../images/icon_remove.gif') 4px 4px transparent no-repeat;
+}
