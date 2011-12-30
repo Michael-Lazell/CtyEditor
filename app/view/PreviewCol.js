@@ -5,7 +5,7 @@
  * Time: 12:19 PM
  * To change this template use File | Settings | File Templates.
  */
-Ext.define('CtyEditor.view.PreviewCol', {
+Ext.define('App.view.PreviewCol', {
     extend: 'Ext.panel.Panel',
 
     alias: 'widget.previewcol',

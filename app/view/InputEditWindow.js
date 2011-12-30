@@ -5,12 +5,6 @@
  * Time: 7:52 PM
  * To change this template use File | Settings | File Templates.
  */
-Ext.apply('Ext.form.field.VTypes', {
-    noSpace: function (val, field) {
-        return !/\s/g.test(val);
-    },
-    noSpaceText: 'No spaces are allowed for this field.'
-});
 var configOptions = Ext.create('Ext.data.Store', {
     fields: ['name', 'value'],
     data: [
@@ -21,13 +15,13 @@ var configOptions = Ext.create('Ext.data.Store', {
         {"name": "empty", "value": "empty"}
     ]
 });
-Ext.define('CtyEditor.view.InputEditWindow', {
+Ext.define('App.view.InputEditWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.inputEdit',
 
-    config: {
+    /*config: {
         type: 'default'
-    },
+    },*/
 
     title: 'Edit text input',
     autoShow: true,
@@ -174,6 +168,7 @@ Ext.define('CtyEditor.view.InputEditWindow', {
                 bodyPadding: 10,
                 border: 0,
                 autoScroll: true,
+                monitorValid: true,
                 /*tpl: new Ext.XTemplate(Templates.ctyEditor.helpInput, {
 
                 }),*/

@@ -47,7 +47,7 @@
     }
 });*/
 
-Ext.define('CtyEditor.view.TreeLeftCol', {
+Ext.define('App.view.TreeLeftCol', {
     extend: 'Ext.tree.Panel',
     alias: 'widget.leftcol',
 

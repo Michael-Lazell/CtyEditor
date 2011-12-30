@@ -5,7 +5,7 @@
  * Time: 3:53 PM
  * To change this template use File | Settings | File Templates.
  */
-Ext.define('CtyEditor.view.RadioOptionRow', {
+Ext.define('App.view.RadioOptionRow', {
     extend: 'Ext.container.Container',
     alias: 'widget.radioOptionRow',
 
@@ -37,6 +37,7 @@ Ext.define('CtyEditor.view.RadioOptionRow', {
             {
                 xtype: 'textfield',
                 name: 'radioValue',
+                vtype: 'noSpace',
                 width: 120,
                 margin: '0 3 0 0',
                 helpText: 'The value will appear in the XML when this option is selected.'

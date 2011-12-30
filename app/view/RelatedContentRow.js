@@ -5,7 +5,7 @@
  * Time: 9:13 PM
  * To change this template use File | Settings | File Templates.
  */
-Ext.define('CtyEditor.view.RelatedContentRow', {
+Ext.define('App.view.RelatedContentRow', {
     extend: 'Ext.container.Container',
     alias: 'widget.relatedContentRow',
 

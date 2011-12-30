@@ -1,4 +1,4 @@
-Ext.define('CtyEditor.model.BlockEditModel', {
+Ext.define('App.model.BlockEditModel', {
     extend: 'Ext.data.Model',
 
     fields: [

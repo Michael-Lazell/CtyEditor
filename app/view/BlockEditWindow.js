@@ -5,13 +5,7 @@
  * Time: 5:23 PM
  * To change this template use File | Settings | File Templates.
  */
-Ext.apply('Ext.form.field.VTypes', {
-    noSpace: function (val, field) {
-        return !/\s/g.test(val);
-    },
-    noSpaceText: 'No spaces are allowed for this field.'
-});
-Ext.define('CtyEditor.view.BlockEditWindow', {
+Ext.define('App.view.BlockEditWindow', {
     extend: 'Ext.window.Window',
     alias: 'widget.blockedit',
 
@@ -84,3 +78,4 @@ Ext.define('CtyEditor.view.BlockEditWindow', {
         me.callParent(arguments);
     }
 });
+

@@ -10,7 +10,7 @@ var ICON_MOVE_UP_DISABLED = 'resources/images/icon_move_up-disabled.gif';
 var ICON_MOVE_DOWN = 'resources/images/icon_move_down.gif';
 var ICON_MOVE_DOWN_DISABLED = 'resources/images/icon_move_down-disabled.gif';
 
-Ext.define('CtyEditor.controller.CtyControlsController', {
+Ext.define('App.controller.CtyControlsController', {
     extend: 'Ext.app.Controller',
 
     stores: [
@@ -104,14 +104,14 @@ Ext.define('CtyEditor.controller.CtyControlsController', {
     },
 
     addBlock: function (button) {
-        var blockWindow = Ext.create('CtyEditor.view.BlockEditWindow', {
+        var blockWindow = Ext.create('App.view.BlockEditWindow', {
             //renderTo: Ext.getBody()
         });
         blockWindow.down('#helpPanel').update(button.helpText);
         blockWindow.show();
     },
     addInput: function (button) {
-        var inputWindow = Ext.create('CtyEditor.view.InputEditWindow', {
+        var inputWindow = Ext.create('App.view.InputEditWindow', {
             //type: button.type
             //renderTo: Ext.getBody()
         });
@@ -135,7 +135,7 @@ Ext.define('CtyEditor.controller.CtyControlsController', {
     //When the save button is clicked for edit block form.
     saveBlock: function (button) {
         var form = button.up('window').down('#blockEditFormPanel');
-        var blockModel = Ext.create('CtyEditor.model.BlockEditModel', {
+        var blockModel = Ext.create('App.model.BlockEditModel', {
             name: form.down('#blockNameTextfield').getValue(),
             group: form.down('#blockGroupTextfield').getValue()
         });
@@ -148,9 +148,31 @@ Ext.define('CtyEditor.controller.CtyControlsController', {
     },
     //When the save button is clicked for an addInput form.
     saveInput: function (button) {
-        var form = button.up('window').down('#inputFormPanel');
+        var formPanel = button.up('window').down('#inputFormPanel');
+        //console.log(form);
+        var formErrors = [];
+        var formFields = formPanel.getForm().getFields().items;
 
-        Ext.Msg.alert('Notice','Not implemented yet.')
+        console.log(formErrors);
+        console.log(formFields);
+        var i = 0;
+        for(i = 0; i < formFields.length; i++){
+            if(formFields[i].getErrors() != '') {
+                formErrors.push(formFields[i].getErrors());
+            }
+
+        }
+        if(formErrors.length > 0) {
+            Ext.Msg.alert('Error', 'The form is not valid');
+        }
+
+
+        /*if(form.isValid()){
+            Ext.Msg.alert('Notice','Not implemented yet.')
+        } else {
+            Ext.Msg.alert('Error','Not valid!')
+        }*/
+
 
     },
 

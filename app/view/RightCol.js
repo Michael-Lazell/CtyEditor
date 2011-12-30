@@ -5,7 +5,7 @@
  * Time: 12:29 PM
  * To change this template use File | Settings | File Templates.
  */
-Ext.define('CtyEditor.view.RightCol', {
+Ext.define('App.view.RightCol', {
     extend: 'Ext.panel.Panel',
 
     alias: 'widget.rightcol',

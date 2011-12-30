@@ -5,7 +5,7 @@
  * Time: 1:56 PM
  * To change this template use File | Settings | File Templates.
  */
-Ext.define('CtyEditor.store.NewCtyMarker', {
+Ext.define('App.store.NewCtyMarker', {
     extend: 'Ext.data.TreeStore',
 
     model: 'CtyEditor.model.NewCty',

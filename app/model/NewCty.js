@@ -5,7 +5,7 @@
  * Time: 2:02 PM
  * To change this template use File | Settings | File Templates.
  */
-Ext.define('CtyEditor.model.NewCty', {
+Ext.define('App.model.NewCty', {
     extend: 'Ext.data.Model',
 
     fields: ['text', 'name']
