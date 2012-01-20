@@ -16,3 +16,11 @@
 .iconRemove {
 	background: url('../images/icon_remove.gif') 4px 4px transparent no-repeat;
 }
+
+.icon-edit {
+    background-image: url("../images/pencil.png");
+}
+
+.icon-delete {
+    background-image: url("../icons/16x16/delete.png");
+}

@@ -8,28 +8,23 @@
 Ext.define('App.store.NewCtyMarker', {
     extend: 'Ext.data.TreeStore',
 
-    model: 'CtyEditor.model.NewCty',
-/*    fields: [
-        'text',
-        'expanded',
-        'children',
-        'name'
-    ],*/
+    //model: 'App.model.NewCty',
+
     autoLoad: true,
 
     proxy: {
         type: 'ajax',
-        url: 'data/newCtyMarker.json',
+        url: 'data/newCtyMarker.json'//,
         /*api: {
             read: 'data/newCtyMarker.json',
             update: 'data/newCtyMarker.json'
         },*/
 
-        reader: {
+        /*reader: {
             type: 'json',
             root: 'root',
             successProperty: 'success'
-        }
+        }*/
     }
 
 });

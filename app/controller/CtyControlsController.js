@@ -5,6 +5,9 @@
  * Time: 12:48 PM
  * To change this template use File | Settings | File Templates.
  */
+/*if(!Editor) {
+    var Editor = Common.CtyEditor;
+}*/
 var ICON_MOVE_UP = 'resources/images/icon_move_up.gif';
 var ICON_MOVE_UP_DISABLED = 'resources/images/icon_move_up-disabled.gif';
 var ICON_MOVE_DOWN = 'resources/images/icon_move_down.gif';
@@ -14,10 +17,11 @@ Ext.define('App.controller.CtyControlsController', {
     extend: 'Ext.app.Controller',
 
     stores: [
-        //'NewCtyMarker'
+        'NewCtyMarker'
     ],
     models: [
         'BlockEditModel'
+        //'NewCty' // This is just a short test
     ],
     views: [
         'PreviewCol',
@@ -29,10 +33,6 @@ Ext.define('App.controller.CtyControlsController', {
         'RelatedContentRow',
         'DropdownOptionRow'
     ],
-
-    /*requires: [
-        'app.common.Common'
-    ],*/
 
     init: function () {
         this.control({
@@ -141,7 +141,9 @@ Ext.define('App.controller.CtyControlsController', {
         });
         var errors = blockModel.validate();
         if(errors.isValid()) {
-            Ext.Msg.alert('Success', 'Valid! But saving the data has not been implemented yet :(.');
+            //Ext.Msg.alert('Success', 'Valid! But saving the data has not been implemented yet :(.');
+            Common.CtyEditor.saveBlock(form);
+            button.up('window').close();
         } else {
             this.printErrors(errors, blockModel);
         }
@@ -153,8 +155,7 @@ Ext.define('App.controller.CtyControlsController', {
         var formErrors = [];
         var formFields = formPanel.getForm().getFields().items;
 
-        console.log(formErrors);
-        console.log(formFields);
+        //console.log(formFields);
         var i = 0;
         for(i = 0; i < formFields.length; i++){
             if(formFields[i].getErrors() != '') {
@@ -166,12 +167,13 @@ Ext.define('App.controller.CtyControlsController', {
             Ext.Msg.alert('Error', 'The form is not valid');
         }
 
+        console.log(formErrors);
 
-        /*if(form.isValid()){
+        if(formPanel.getForm().isValid()){
             Ext.Msg.alert('Notice','Not implemented yet.')
         } else {
             Ext.Msg.alert('Error','Not valid!')
-        }*/
+        }
 
 
     },

@@ -13,11 +13,14 @@ Ext.application({
     appFolder: 'app',
 
     controllers: [
-        'CtyControlsController'
+        'CtyControlsController',
+        'TreeMarkerController'
     ],
     requires: [
-        'Common.Common',
-        'Ext.form.*'   // This is required for the custom VTypes below
+        //'Common.Common',
+        'Common.CtyEditor',
+        //'Ext.form.*'   // This is required for the custom VTypes below
+        'Ext.form.VTypes'
     ],
 
     launch: function () {
@@ -58,6 +61,9 @@ Ext.application({
 
 
         });
-
+        if(!Editor) {
+            var Editor = Common.CtyEditor;
+        }
+        //console.log('Current block: ' + Editor.getCurrentBlock());
     }
 });

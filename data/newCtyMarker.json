@@ -1,38 +1,33 @@
 {
     "success": true,
-    "root": {
-        "expanded": true,
-        "children": [
-            {
-                "expanded": true,
-                "text": "Config",
-                "children": [
-                    { "text": "Block1", "name": "Personal info", "expanded": true, "children": [
-                        { "text": "Input", "name": "last_name", "leaf": true }
-                    ] },
-                    { "text": "Block 2", "name": "More info", "expanded": true, "children": [
-                        { "text": "Input", "name": "first_name", "leaf": true }
-                    ] }
-                ]
-            },
-            {
-                "expanded": true,
-                "text": "Browse",
-                "children": [
-                    { "text": "Column", "leaf": true }
-                ]
-            },
-            {
-                "expanded": true,
-                "text": "Index",
-                "children": [
-                    { "text": "Parameters", "leaf": true }
-                ]
-            }
-        ]
+    "text": ".",
+    "expanded": true,
+    "children": [
+        {
+            "expanded": true,
+            "text": "Config",
+            "children": [
+                { "text": "block01", "name": "block", "expanded": true, "children": [
+                    //{ "text": "last_name", "name": "Input", "leaf": true }
+                ] }
+            ]
+        },
+        {
+            "expanded": true,
+            "text": "Browse",
+            "children": [
+                { "text": "Column", "leaf": true }
+            ]
+        },
+        {
+            "expanded": true,
+            "text": "Index",
+            "children": [
+                { "text": "Parameters", "leaf": true }
+            ]
+        }
+    ]
 
-
-    }
 }
 
 

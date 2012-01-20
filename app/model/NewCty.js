@@ -7,6 +7,10 @@
  */
 Ext.define('App.model.NewCty', {
     extend: 'Ext.data.Model',
+    //implement: 'Ext.data.NodeInterface', // ?
 
-    fields: ['text', 'name']
+    fields: [
+        {name: 'text', type: 'string'},
+        {name: 'name', type: 'string'}
+    ]
 });

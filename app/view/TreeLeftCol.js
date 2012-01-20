@@ -53,10 +53,19 @@ Ext.define('App.view.TreeLeftCol', {
 
     title: 'Editable components',
     width: 250,
-    bodyPadding: 5,
     rootVisible: false,
+    bodyPadding: 5,
 
-    fields: ['text', 'name'],
+    //store: store,
+    store: 'NewCtyMarker',
+
+    viewConfig: {
+        plugins: {
+            ptype: 'treeviewdragdrop'
+        }
+    },
+
+    /*fields: ['text', 'name'],
     columns: [{
         xtype: 'treecolumn',
         text: 'Type',
@@ -66,9 +75,9 @@ Ext.define('App.view.TreeLeftCol', {
         text: 'Name',
         dataIndex: 'name',
         flex: 1
-    }],
+    }],*/
 
-    root: {
+    /*root: {
         name: 'root',
         //text: 'The root',
         expanded: true,
@@ -78,13 +87,13 @@ Ext.define('App.view.TreeLeftCol', {
             name: 'Person',
             children: [
                 {
-                    text: 'Block 1',
-                    name: 'Personal Info',
+                    text: 'Personal Info',
+                    name: 'Block 1',
                     expanded: true,
                     children: [
                         {
-                            text: 'Text',
-                            name: 'last_name',
+                            text: 'last_name',
+                            name: 'Text',
                             leaf: true
                         }
                     ]
@@ -101,10 +110,9 @@ Ext.define('App.view.TreeLeftCol', {
             text: 'Index',
             children: []
         }]
-    },
+    },*/
 
-    //store: store,
-    //store: 'NewCtyMarker',
+
 
     initComponent: function () {
        /* this.items = [
