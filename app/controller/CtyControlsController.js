@@ -20,8 +20,8 @@ Ext.define('App.controller.CtyControlsController', {
         'NewCtyMarker'
     ],
     models: [
-        'BlockEditModel'
-        //'NewCty' // This is just a short test
+        'BlockEditModel',
+        'NewCty' // This is just a short test
     ],
     views: [
         'PreviewCol',
@@ -92,8 +92,30 @@ Ext.define('App.controller.CtyControlsController', {
             },
             'inputEdit [hasMovers=true]': {
                 add: this.disableMovers
+            },
+            '* [action=loadTestContenttype]': {
+                click: this.loadTestContenttypes
             }
         });
+    },
+    // Temporary test to load different test contenttypes.
+    loadTestContenttypes: function(button){
+        /*var theStore = Ext.data.StoreManager.lookup('NewCtyMarker');*/
+        var theStore = Ext.getStore('NewCtyMarker');
+        theStore.setProxy({
+            type: 'ajax',
+            url: button.urlPath
+        });
+
+        this.clearTree(theStore);
+        theStore.load();
+    },
+    // Workaround for bug in 4.0.7
+    clearTree: function(treePanel) {
+        var delNode;
+        while (delNode = treePanel.getRootNode().childNodes[0]) {
+            treePanel.getRootNode().removeChild(delNode);
+        }
     },
 
     setHelp: function (field) {
@@ -167,7 +189,7 @@ Ext.define('App.controller.CtyControlsController', {
             Ext.Msg.alert('Error', 'The form is not valid');
         }
 
-        console.log(formErrors);
+        //console.log(formErrors);
 
         if(formPanel.getForm().isValid()){
             Ext.Msg.alert('Notice','Not implemented yet.')
@@ -210,7 +232,6 @@ Ext.define('App.controller.CtyControlsController', {
         var container = button.up('window').down(button.optionContainer);
         container.add([
                 {
-                    //xtype: 'dropdownOptionRow'
                     xtype: button.optionRow
                 }
             ]

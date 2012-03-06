@@ -1,0 +1,70 @@
+{
+    "success": true,
+    "text": ".",
+    "expanded": true,
+    "children": [
+        {
+            "expanded": true,
+            "text": "Config",
+            "id": "config",
+            "name": "Person",
+            "version": "1.0",
+            "title": "last-name",
+            "nodeType": "config",
+            "allowDrag": "false",
+            "children": [
+                { "nodeType": "block",
+                  "text": "Personal information",
+                  "name": "Personal information",
+                  "expanded": true,
+                  "children": [
+                      {
+                          "leaf": true,
+                          "text": "last-name",
+                          "nodeType": "input",
+                          "type": "text",
+                          "name": "last-name",
+                          "required": true,
+                          "display": "Last name",
+                          "xpath": "contentdata/last-name",
+                          "help": "Enter the last name",
+                          "size": 30,
+                          "maxlength": 30
+                      },
+                      {
+                          "leaf": true,
+                          "text": "history",
+                          "nodeType": "input",
+                          "type": "textarea",
+                          "name": "history",
+                          "required": true,
+                          "display": "Personal history",
+                          "xpath": "contentdata/history",
+                          "help": "Enter any relevant history"
+                      }
+                ]}
+            ]
+        },
+        {
+            "expanded": true,
+            "text": "Browse",
+            "nodeType": "browse",
+            "id": "browse",
+            "allowDrag": "false",
+            "children": [
+                { "text": "Column", "leaf": true }
+            ]
+        },
+        {
+            "expanded": true,
+            "text": "Index",
+            "nodeType": "index",
+            "id": "index",
+            "allowDrag": "false",
+            "children": [
+                { "text": "Parameters", "leaf": true }
+            ]
+        }
+    ]
+
+}

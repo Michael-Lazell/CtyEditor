@@ -13,10 +13,25 @@ Ext.define('App.view.PreviewCol', {
     region: 'center',
     title: 'Preview',
     //border: 5,
-    bodyPadding: 5,
-    html: 'Testing',
+    bodyPadding: 10,
+    autoScroll: true,
+    layout: 'anchor',
+    //html: 'Testing',
 
     initComponent: function () {
+
+        this.items = [
+            {
+                xtype: 'configform',
+                layout: 'anchor'//,
+                //anchor: '100%'
+            },
+            {
+                xtype: 'fieldset',
+                title: 'Testing this stuff',
+                width: 300
+            }
+        ]
 
 
         this.callParent(arguments);

@@ -13,13 +13,12 @@ Ext.define('App.view.MarkerContextMenu', {
         {
             text: 'Edit',
             iconCls: 'icon-edit',
-            action: 'edit',
-            disableOnMultipleSelection: true
+            action: 'edit'
         },
         {
             text: 'Delete',
             iconCls: 'icon-delete',
-            action: 'showDeleteWindow'
+            action: 'deleteNode'
         }
     ]
 });

@@ -21,12 +21,13 @@ Ext.define('Common.CtyEditor', {
         return this;
     },
 
-    saveBlock: function(block) {
-        Ext.Msg.alert('INFO', 'Not implemented yet');
+    saveBlock: function(blockForm) {
+        
+        Ext.Msg.alert('INFO', 'Not implemented yet, but soon.');
     },
 
     addInput: function(node) {
-        alert("Adding the input" + this.currentBlock);
+        alert("Adding the input" + this.getCurrentBlock());
 
         return this;
     }

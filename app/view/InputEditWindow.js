@@ -515,9 +515,9 @@ Ext.define('App.view.InputEditWindow', {
                 this.setHeight(360);
                 break;
         }
-        var i = 0;
+        /*var i = 0;
 
-        /*while(me.down('#inputFormPanel').items.items[i]){
+        while(me.down('#inputFormPanel').items.items[i]){
             console.log( me.down('#inputFormPanel').items.items[i]);
             var field = me.down('#inputFormPanel').items.items[i];
             if(field.required === true && (field.fieldLabel != undefined)){

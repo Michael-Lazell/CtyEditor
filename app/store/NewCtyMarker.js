@@ -5,12 +5,15 @@
  * Time: 1:56 PM
  * To change this template use File | Settings | File Templates.
  */
+
 Ext.define('App.store.NewCtyMarker', {
     extend: 'Ext.data.TreeStore',
 
-    //model: 'App.model.NewCty',
+    model: 'App.model.NewCty',
 
     autoLoad: true,
+    autoSync: true,
+    clearOnLoad: false,
 
     proxy: {
         type: 'ajax',

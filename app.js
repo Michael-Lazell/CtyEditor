@@ -6,6 +6,12 @@ Ext.Loader.setConfig({
     }
 });
 
+
+
+
+
+
+
 Ext.application({
     /*name: 'CtyEditor',*/
     name: 'App',
@@ -19,21 +25,37 @@ Ext.application({
     requires: [
         //'Common.Common',
         'Common.CtyEditor',
-        //'Ext.form.*'   // This is required for the custom VTypes below
+        //'Ext.form.*',   // This is required for the custom VTypes below
         'Ext.form.VTypes'
     ],
 
     launch: function () {
-        /*var test = Ext.create(Common.Common, {
-            name: 'Mike',
-            food: 'pizza'
-        });
-        alert(test.getName());
-        alert(test.getFood());*/
 
         Ext.create('Ext.container.Viewport', {
+
             layout: 'border',
             items: [
+                {
+                    xtype: 'toolbar',
+                    region: 'north',
+                    items: [
+                        {
+                            text: 'New Contenttype',
+                            action: 'loadTestContenttype',
+                            urlPath: 'data/newCtyMarker.json'
+                        },
+                        {
+                            text: 'Load test1',
+                            action: 'loadTestContenttype',
+                            urlPath: 'data/contenttype1.json'
+                        },
+                        {
+                            text: 'Load test2',
+                            action: 'loadTestContenttype',
+                            urlPath: 'data/contenttype2.json'
+                        }
+                    ]
+                },
                 {
                     xtype: 'leftcol',
                     region: 'west'
@@ -64,6 +86,6 @@ Ext.application({
         if(!Editor) {
             var Editor = Common.CtyEditor;
         }
-        //console.log('Current block: ' + Editor.getCurrentBlock());
+        console.log('Current block: ' + Editor.getCurrentBlock());
     }
 });

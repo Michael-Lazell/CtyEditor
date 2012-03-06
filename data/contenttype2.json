@@ -8,9 +8,6 @@
             "text": "Config",
             "nodeType": "config",
             "id": "config",
-            "name": "Person",
-            "title": "last-name",
-            "version": "1.0",
             "allowDrag": "false",
             "children": [
                 { "nodeType": "block",
@@ -45,6 +42,3 @@
     ]
 
 }
-
-
-
